@@ -11,11 +11,10 @@ def turn_count(board)
 end
 
 def current_player(board)
-  board.each do |turn|
-    if turn.even?
-      return "X"
-    else
-      return "O"
-    end
+  if turn_count(board).even?
+    return "X"
+  else
+    return "O"
   end
 end
+
